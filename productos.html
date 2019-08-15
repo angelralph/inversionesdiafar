@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <link rel="stylesheet" href="owl/owl.carousel.min.css">
+        <link rel="stylesheet" href="owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <title>Inversiones Diafar</title>
+</head>
+<body>
+
+
+  <a id="whatsapp" href="https://api.whatsapp.com/send?phone=584264066715"><img src="imagenes/whatsapp.png" ></a> 
+
+  <header>
+<div class="menu">
+    <div class="contenedor">
+  
+    <p class="logo">Inversiones Diafar</p>
+    <img class="menu-icon" src="imagenes/menu.png" >
+    <nav>
+        <ul>
+            <li><a href="#sobre-mi">Sobre Nosotros</a></li>
+            <li><a href="#productos">Nuestros productos</a></li>
+            <li><a href="#contacto">Contacto </a></li>
+        </ul>
+
+
+    </nav>
+    
+    </div>
+</div>
+    </header>
+
+
+<main>
+
+</main>
+
+<footer>
+  <div class="contenedor">
+  <div class="redes" id="instagram-bar">
+          <div>
+              <img id="instagramlogo"  src="imagenes/instagram.svg" >
+
+          </div>
+          <div>
+            <a href="https://www.instagram.com/inversiones_diafar.c.a/" target="_blank">
+              <p class="fuerte">¡Siguenos en instagram!</p>  <p>Echa un vistazo.</p>
+              <img id="instagram-arrow"src="imagenes/whitearrow.png" alt="">
+            </a>
+          </div> 
+  </div>
+    <div class="parrafo">
+      <p class="derechos">© 2019 Angel Useche | Diseñador Web. Todos los derechos reservados</p>
+    </div>
+  </div>
+</footer>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="owl/owl.carousel.min.js"></script>
+<script>
+        $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    })
+    </script>
+
+
+
+    <script>
+    
+    $(document).ready(function(){
+
+      $(window).scroll(function(){ 
+        scroll = $(window).scrollTop();
+        if (scroll > 100) {
+          $(".menu").css({"position":"fixed"});
+          $(".menu").css({"width":"100%"});
+          $(".menu").css({"top":"0"});
+          $(".menu").css({"background":"#fff"});
+          $(".menu nav").css({"background":"#fff"});
+          $(".menu a").css({"color": "#9932cc"});
+          $(".logo").css({"color":" #9932cc"});
+          $(".menu").css({"box-shadow": "rgba (0, 0, 0, 0.22) 6px 1px 1px"});
+          $(".menu").css({"z-index":"100"});
+        } else{
+          /*cuando no hay scroll o el scroll sube */
+
+          $(".menu").css({"position":"relative"});
+          $(".menu").css({"background":"transparent"});
+          $(".menu nav").css({"background":"transparent"});
+          $(".menu").css({"box-shadow":"0 0 0"});
+          $(".menu a").css({"color":"#fff"});
+          $(".logo").css({"color":"#fff"});
+
+        }
+
+
+      })
+
+      $(".menu-icon").click(function(){
+        $("header nav").slideToggle();/*esta funcion hace que el menu aparezca deslizandoce hacia abajo y desaparezca deslizandose hacia arriba, tambien tenemos slideDown y slideUp*/ 
+
+
+      })
+    })
+
+    </script>
+
+
+
+
+</body>
+</html>
